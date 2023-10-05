@@ -10,7 +10,6 @@ Here are the features that make this anti-cheat the best
 
 ### Full asynchronous checks
 * All checks and listeners run in asynchronous (Netty Thread)
-* Each action is divided for part to avoid lag
 * The AstralWarden does not affect performance with high amount of players
 
 ### Staff commands
