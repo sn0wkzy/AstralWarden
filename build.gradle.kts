@@ -26,8 +26,8 @@ allprojects {
 
     dependencies {
         api("com.github.SaiintBrisson.command-framework:bukkit:1.3.1")
-        api("org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT")
-        api("com.github.retrooper.packetevents:spigot:2.0.2")
+        compileOnlyApi("org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT")
+        compileOnlyApi("com.github.retrooper.packetevents:spigot:2.0.2")
         compileOnlyApi("org.jetbrains:annotations:23.0.0")
 
         implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")

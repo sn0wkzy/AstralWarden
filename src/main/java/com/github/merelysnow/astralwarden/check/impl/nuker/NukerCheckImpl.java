@@ -12,6 +12,7 @@ import com.github.retrooper.packetevents.protocol.packettype.PacketType;
 import com.github.retrooper.packetevents.protocol.packettype.PacketTypeCommon;
 import com.github.retrooper.packetevents.protocol.player.DiggingAction;
 import com.github.retrooper.packetevents.protocol.player.User;
+import com.github.retrooper.packetevents.protocol.world.states.WrappedBlockState;
 import com.github.retrooper.packetevents.util.Vector3i;
 import com.github.retrooper.packetevents.wrapper.play.client.WrapperPlayClientPlayerDigging;
 import org.bukkit.Bukkit;
@@ -45,14 +46,10 @@ public class NukerCheckImpl extends Check {
     @Override
     public void onPacketReceive(PacketReceiveEvent event) {
         final PacketTypeCommon packetType = event.getPacketType();
-        if (packetType != PacketType.Play.Client.PLAYER_DIGGING) {
-            return;
-        }
+        if (packetType != PacketType.Play.Client.PLAYER_DIGGING) return;
 
         final WrapperPlayClientPlayerDigging wrapperPlayClientPlayerDigging = new WrapperPlayClientPlayerDigging(event);
-        if (wrapperPlayClientPlayerDigging.getAction() != DiggingAction.START_DIGGING) {
-            return;
-        }
+        if (wrapperPlayClientPlayerDigging.getAction() != DiggingAction.START_DIGGING) return;
 
         final User user = event.getUser();
         final WardenPlayer wardenPlayer = wardenPlayerCache.get(user.getName());
@@ -73,6 +70,7 @@ public class NukerCheckImpl extends Check {
             return;
         }
 
+        wardenPlayer.getPlayer().getEyeLocation().getBlock();
         astralWardenLogger.log(wardenPlayer, this, checkData);
         if (checkData.getViolations() > fileConfiguration.getInt("Configuration.Nuker.max-violations")) {
             Bukkit.getScheduler().runTask(astralWardenPlugin, () -> wardenPlayer.getPlayer().kickPlayer("§cNuker detectado"));
