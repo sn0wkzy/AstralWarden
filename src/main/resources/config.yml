@@ -4,4 +4,4 @@ Configuration:
     max-violations: 15 #if player violations is higher than this value the player was kick from server
 
   Nuker:
-    max-violations: 3 #if player violations is higher than this value the player was kick from server
+    max-violations: 5 #if player violations is higher than this value the player was kick from server
