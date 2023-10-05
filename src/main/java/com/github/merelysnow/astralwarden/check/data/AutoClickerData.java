@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 @Data
 public class AutoClickerData extends CheckData {
 
+    private long startDelay = 0L;
     private int clicks = 0;
 
     public void incrementClicks() {
