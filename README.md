@@ -13,6 +13,6 @@ Here are the features that make this anti-cheat the best
 ### Staff commands
 All commands have the aliases **/aw** to use more easy.
 
-**/astralwarden** - Base command
+**/astralwarden** - Base command \n
 **/astralwarden notify (astralwarden.notify)** - Command to turn on/off the notify checks
 **/astralwarden profile (astralwarden.profile)** - Command to view a player profile
