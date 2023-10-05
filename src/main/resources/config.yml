@@ -1,0 +1,7 @@
+Configuration:
+  AutoClicker:
+    max-cps: 15 #if player cps is higher than this value the anticheat send one log
+    max-violations: 15 #if player violations is higher than this value the player was kick from server
+
+  Nuker:
+    max-violations: 3 #if player violations is higher than this value the player was kick from server

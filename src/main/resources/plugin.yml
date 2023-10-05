@@ -1,0 +1,5 @@
+name: AstralWarden
+version: 1.0.0
+main: com.github.merelysnow.astralwarden.AstralWardenPlugin
+depend:
+  - packetevents
