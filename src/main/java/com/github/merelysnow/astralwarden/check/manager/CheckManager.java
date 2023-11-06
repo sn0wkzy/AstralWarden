@@ -1,8 +1,8 @@
 package com.github.merelysnow.astralwarden.check.manager;
 
 import com.github.merelysnow.astralwarden.AstralWardenPlugin;
-import com.github.merelysnow.astralwarden.check.Check;
 import com.github.merelysnow.astralwarden.cache.WardenPlayerCache;
+import com.github.merelysnow.astralwarden.check.Check;
 import com.github.merelysnow.astralwarden.check.impl.autoclicker.AutoClickCheckImpl;
 import com.github.merelysnow.astralwarden.check.impl.nuker.NukerCheckImpl;
 import com.github.merelysnow.astralwarden.logger.AstralWardenLogger;

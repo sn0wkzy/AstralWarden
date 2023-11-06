@@ -37,16 +37,11 @@ public class AstralWardenPlugin extends JavaPlugin {
                 new ProfileCommand(wardenPlayerCache)
         );
 
-
         MessageHolder messageHolder = bukkitFrame.getMessageHolder();
 
         messageHolder.setMessage(MessageType.NO_PERMISSION, "§cVocê não tem permissão para executar este comando.");
         messageHolder.setMessage(MessageType.ERROR, "§cUm erro ocorreu! {error}");
         messageHolder.setMessage(MessageType.INCORRECT_USAGE, "§cUtilize /{usage}");
         messageHolder.setMessage(MessageType.INCORRECT_TARGET, "§cVocê não pode utilizar este comando pois ele é direcioado apenas para {target}.");
-    }
-
-    public static AstralWardenPlugin getInstance() {
-        return getPlugin(AstralWardenPlugin.class);
     }
 }

@@ -1,6 +1,7 @@
 package com.github.merelysnow.astralwarden.check;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter

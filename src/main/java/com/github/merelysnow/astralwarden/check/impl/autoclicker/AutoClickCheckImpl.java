@@ -1,8 +1,8 @@
 package com.github.merelysnow.astralwarden.check.impl.autoclicker;
 
 import com.github.merelysnow.astralwarden.AstralWardenPlugin;
-import com.github.merelysnow.astralwarden.check.Check;
 import com.github.merelysnow.astralwarden.cache.WardenPlayerCache;
+import com.github.merelysnow.astralwarden.check.Check;
 import com.github.merelysnow.astralwarden.check.CheckType;
 import com.github.merelysnow.astralwarden.check.data.AutoClickerData;
 import com.github.merelysnow.astralwarden.logger.AstralWardenLogger;
@@ -40,7 +40,8 @@ public class AutoClickCheckImpl extends Check {
         if (packetType != PacketType.Play.Client.INTERACT_ENTITY) return;
 
         final WrapperPlayClientInteractEntity wrapperPlayClientInteractEntity = new WrapperPlayClientInteractEntity(event);
-        if (wrapperPlayClientInteractEntity.getAction() != WrapperPlayClientInteractEntity.InteractAction.ATTACK) return;
+        if (wrapperPlayClientInteractEntity.getAction() != WrapperPlayClientInteractEntity.InteractAction.ATTACK)
+            return;
 
         final User user = event.getUser();
         final WardenPlayer wardenPlayer = wardenPlayerCache.get(user.getName());

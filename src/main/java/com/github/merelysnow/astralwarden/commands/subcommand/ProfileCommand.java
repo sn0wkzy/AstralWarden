@@ -19,14 +19,14 @@ public class ProfileCommand {
 
     @Command(
             name = "astralwarden.profile",
-            aliases = { "aw.profile" },
+            aliases = {"aw.profile"},
             permission = "astralwarden.profile"
     )
     public void handleCommand(Context<Player> context, String targetName) {
         final Player player = context.getSender();
         final Player target = Bukkit.getPlayerExact(targetName);
 
-        if(target == null) {
+        if (target == null) {
             player.sendMessage("§cOops! o jogador alvo está offline ou não existe.");
             return;
         }

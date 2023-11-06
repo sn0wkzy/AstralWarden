@@ -16,12 +16,12 @@ public class AstralWardenLogger {
     private final WardenPlayerCache wardenPlayerCache;
 
     public void log(@NotNull WardenPlayer wardenPlayer, Check check, CheckData checkData) {
-        final List<WardenPlayer> staffList = wardenPlayerCache.values().stream().filter(WardenPlayer::isNotify).collect(Collectors.toList());
-
         checkData.incrementViolation();
-        if(staffList.isEmpty()) return;
 
-        for(WardenPlayer all : staffList) {
+        final List<WardenPlayer> staffList = wardenPlayerCache.values().stream().filter(WardenPlayer::isNotify).collect(Collectors.toList());
+        if (staffList.isEmpty()) return;
+
+        for (WardenPlayer all : staffList) {
             all.sendMessage(String.format("§8[AstralWarden] §a%s §7falhou §c%s %sx", wardenPlayer.getPlayerName(), check.getName(), checkData.getViolations()));
         }
     }

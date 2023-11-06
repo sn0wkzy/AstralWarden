@@ -2,7 +2,6 @@ package com.github.merelysnow.astralwarden.listeners;
 
 import com.github.merelysnow.astralwarden.cache.WardenPlayerCache;
 import com.github.merelysnow.astralwarden.player.WardenPlayer;
-import com.google.common.collect.Maps;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

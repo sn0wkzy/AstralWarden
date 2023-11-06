@@ -8,10 +8,12 @@ public class AstralWardenCommand {
 
     @Command(
             name = "astralwarden",
-            aliases = { "aw"},
+            aliases = {"aw"},
             permission = "astralwarden.admin"
     )
-    public void handleCommand(Context<Player> context, String argument) {
+    public void handleCommand(Context<Player> context) {
         final Player player = context.getSender();
+
+        player.sendMessage("§8AstralWarden v1.0.1");
     }
 }

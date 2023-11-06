@@ -14,7 +14,7 @@ public class NotifyCommand {
 
     @Command(
             name = "astralwarden.notify",
-            aliases = { "aw.notify" },
+            aliases = {"aw.notify"},
             permission = "astralwarden.notify"
     )
     public void handleCommand(Context<Player> context) {

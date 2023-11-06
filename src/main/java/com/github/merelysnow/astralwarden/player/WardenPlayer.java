@@ -2,7 +2,6 @@ package com.github.merelysnow.astralwarden.player;
 
 import com.github.merelysnow.astralwarden.check.CheckData;
 import com.github.merelysnow.astralwarden.check.CheckType;
-import com.github.merelysnow.astralwarden.check.data.AutoClickerData;
 import com.google.common.collect.Maps;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,7 +29,7 @@ public class WardenPlayer {
 
     public void sendMessage(String... message) {
         final Player player = getPlayer();
-        if(player == null) return;
+        if (player == null) return;
 
         player.sendMessage(message);
     }
