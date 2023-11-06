@@ -8,10 +8,12 @@ contact the developer sn0wkzy#5646.
 
 Here are the features that make this anti-cheat the best
 
+### Dependency
+* **packetevents** - PacketEvents is used to manipule packets to verify cheats
+
 ### Full asynchronous checks
 
 * All checks and listeners run in asynchronous (Netty Thread)
-* Each action is divided for part to avoid lag
 * The AstralWarden does not affect performance with high amount of players
 
 ### Staff commands
